@@ -62,3 +62,34 @@ np.random.sample(c.shape)
 #Random integer values
 np.random.randint(7,size=(3,3)) #Note this is assigned to size instead of shape
 np.random.randint(4,7,size=(3,3)) #Note this is assigned to size instead of shape
+np.random.randint(-4,8,size=(3,3)) #Note this is assigned to size instead of shape
+#Identity Matrix
+np.identity(3)
+#Repeat an array
+arr = np.array([[1,2,3]])
+r1 = np.repeat(arr,3)
+r2 = np.repeat(arr,3,axis = 0) #repeats row, =1 repeats elements like r1 because 1 is column
+#Practice Example
+ex1 = np.ones((5,5),dtype='int16')
+ex1[1:4,1:4] = np.zeros(3)
+ex1[2,2] = 9
+#Be careful when copying arrays like below
+e = np.array([1,2,3])
+#f=e         #Reference was copied! So change in f will change e like below
+#f[0] = 100
+g = e.copy() #Use copy function instead
+
+#Mathematics
+h = np.array([1,2,3,4])
+h+2 #Element-wise operations
+h-2
+h*2
+h/2
+h+=2 #Incremented all elements by 2 and stored in h
+i = np.array([1,0,1,0])
+h+i
+h**2
+np.sin(h) #sin of all elements
+# For a lot more (https://docs.scipy.org/doc/numpy/reference/routines.math.html)"
+
+#Linear Algebra
