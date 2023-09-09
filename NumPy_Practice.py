@@ -100,6 +100,7 @@ c = np.identity(3)
 np.linalg.det(c)
 ## Reference docs (https://docs.scipy.org/doc/numpy/reference/routines.linalg.html)
 # Determinant # Trace # Singular Vector Decomposition # Eigenvalues # Matrix Norm # Inverse # Etc...
+
 #Statistics
 stats = np.array([[1,2,3],[4,5,6]])
 np.min(stats)
@@ -121,3 +122,5 @@ np.vstack([v1,v2,v1,v2])
 h1 = np.ones((2,4))
 h2 = np.zeros((2,2))
 np.hstack((h1,h2))
+
+#Miscellaneous
