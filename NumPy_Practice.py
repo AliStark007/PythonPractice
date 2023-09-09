@@ -1,6 +1,5 @@
 # File created to practice using Python's Numpy Library
 import random
-
 import numpy as np
 import sys
 
@@ -93,3 +92,32 @@ np.sin(h) #sin of all elements
 # For a lot more (https://docs.scipy.org/doc/numpy/reference/routines.math.html)"
 
 #Linear Algebra
+a = np.ones((2,3))
+b = np.full((3,2),2)
+np.matmul(a,b)
+# Find the determinant
+c = np.identity(3)
+np.linalg.det(c)
+## Reference docs (https://docs.scipy.org/doc/numpy/reference/routines.linalg.html)
+# Determinant # Trace # Singular Vector Decomposition # Eigenvalues # Matrix Norm # Inverse # Etc...
+#Statistics
+stats = np.array([[1,2,3],[4,5,6]])
+np.min(stats)
+np.max(stats)
+np.min(stats,axis=1)
+np.max(stats,axis=0)
+np.sum(stats)
+np.sum(stats, axis=0)
+#Reorganizing arrays
+before = np.array([[1,2,3,4],[5,6,7,8]])
+print(before)
+print(before.reshape((8,1)))
+print(before.reshape((4,2)))
+#Vertically stacking vectors
+v1 = np.array([1,2,3,4])
+v2 = np.array([5,6,7,8])
+np.vstack([v1,v2,v1,v2])
+#Horizontally stacking vectors
+h1 = np.ones((2,4))
+h2 = np.zeros((2,2))
+np.hstack((h1,h2))
