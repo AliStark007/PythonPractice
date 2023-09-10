@@ -124,3 +124,18 @@ h2 = np.zeros((2,2))
 np.hstack((h1,h2))
 
 #Miscellaneous
+file_data = np.genfromtxt('numpypractice_data.txt',delimiter=',')
+file_data.astype('int32')
+
+#Boolean Masking and Advanced indexing
+file_data>50
+file_data[file_data>50]
+np.any(file_data>50, axis=0)
+np.all(file_data>50, axis=0)
+np.any(file_data>50, axis=1)
+((file_data>50) & (file_data<100))
+#You can index with a list in NumPy
+a = np.array([1,2,3,4,5,6,7,8,9])
+a[[1,2,8]]
+
+
